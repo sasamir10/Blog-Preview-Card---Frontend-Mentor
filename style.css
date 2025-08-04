@@ -1,16 +1,16 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
 }
 
 body{
-    font-family: 'Figtree', sans-serif;
     background-color: hsl(47, 88%, 63%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 .container{
@@ -18,13 +18,11 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 1.125rem;
     border-radius: 16px;
-    max-width: 300px;
+    max-width: 320px;
     max-height: 450px;
     border: 1.5px solid hsl(0, 0%, 7%);
-
-    /* for black shadow of card */
     box-shadow: 7px 7px hsl(0, 0%, 7%);
     transform: translateY(-2px);
 }
@@ -37,12 +35,12 @@ body{
 .learn{
     background-color: hsl(47, 88%, 63%);
     margin: 16px 0 14px 0;
-    font-weight: bold;
+    font-weight: 800;
     max-width: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 27px;
+    height: 1.5rem;
     font-size: 12px;
     border-radius: 5px;
     flex-shrink: 0;
@@ -53,6 +51,11 @@ body{
     font-size: 14px;
 }
 
+.container h3:hover{
+    color: hsl(47, 88%, 63%);
+    cursor: pointer;
+}
+
 .para{
     margin: 18px 0 16px 0;
     font-weight: 100;
@@ -60,9 +63,10 @@ body{
 }
 
 .footer{
-    margin-top: 10px;
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .profile-img{
@@ -71,6 +75,13 @@ body{
 }
 
 .profile-name{
-    font-weight: bolder;
-    padding: 11px 0 0 13px;
+    font-weight: 700;
+    margin-left: 0.75rem;
+}
+
+@media (max-width: 480px){
+    body{
+        padding: 10%;
+        min-height: 700px;
+    }
 }
